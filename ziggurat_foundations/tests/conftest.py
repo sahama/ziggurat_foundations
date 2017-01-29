@@ -100,7 +100,7 @@ def db_session(request):
     Base.metadata.bind = engine
     Base.metadata.drop_all(engine)
     engine.execute(
-        'DROP TABLE IF EXISTS alembic_ziggurat_foundations_version')
+        'DROP TABLE IF EXISTS alembic_zigg_version')
     if sql_str.startswith('sqlite'):
         # sqlite will not work with alembic
         Base.metadata.create_all(engine)
@@ -132,7 +132,7 @@ def db_session2(request):
     Base.metadata.bind = engine
     Base.metadata.drop_all(engine)
     engine.execute(
-        'DROP TABLE IF EXISTS alembic_ziggurat_foundations_version')
+        'DROP TABLE IF EXISTS alembic_zigg_version')
     if sql_str.startswith('sqlite'):
         # sqlite will not work with alembic
         Base.metadata.create_all(engine)

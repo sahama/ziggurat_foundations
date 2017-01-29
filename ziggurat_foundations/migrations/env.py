@@ -48,7 +48,7 @@ def run_migrations_offline():
     """
     url = config.get_main_option("sqlalchemy.url")
     context.configure(url=url,
-                      version_table='alembic_ziggurat_foundations_version',
+                      version_table='alembic_zigg_version',
                       transaction_per_migration=True,
                       )
 
@@ -72,7 +72,7 @@ def run_migrations_online():
     context.configure(
         connection=connection,
         target_metadata=target_metadata,
-        version_table='alembic_ziggurat_foundations_version',
+        version_table='alembic_zigg_version',
         transaction_per_migration=True
     )
 
